@@ -3,32 +3,32 @@ from django.http import HttpResponse
 
 
 def homepage(request):
-    return render(request, 'homepage/homepage.html')
+    return render(request, 'IFC/homepage.html')
 
 
 def contacts(request):
-    return render(request, 'homepage/contacts.html')
+    return render(request, 'IFC/contacts.html')
 
 
 def ourChapters(request):
-    return render(request, 'homepage/ourChapters.html')
+    return render(request, 'IFC/ourChapters.html')
 
 
 def schedule(request):
-    return render(request, 'homepage/schedule.html')
+    return render(request, 'IFC/schedule.html')
 
 
 def title9(request):
-    return render(request, 'homepage/title9.html')
+    return render(request, 'IFC/title9.html')
 
 
 def forChapters(request):
-    return render(request, 'homepage/forChapters.html')
+    return render(request, 'IFC/forChapters.html')
 
 
 def aboutUs(request):
-    return render(request, 'homepage/aboutUs.html')
+    return render(request, 'IFC/aboutUs.html')
 
 
 def ourChapters(request):
-    return render(request, 'homepage/ourChapters.html')
+    return render(request, 'IFC/ourChapters.html')

@@ -16,6 +16,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+        .with-space {
+            margin-right: 30px; /* Adjust the value as per your needs */
+        }
+    </style>
+
     
 </head>
 
@@ -33,10 +39,21 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item with-space">
+                    <a class="nav-link" href="#">For Chapters</a>
+                </li>
+                <li class="nav-item with-space">
+                    <a class="nav-link" href="#">
+                        <img src="{% static 'IFC/images/IFCLogo.jpg' %}" alt="Button Image" width="150" height="150">
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Title IX</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our Chapters</a>
                 </li>
             </ul>
         </div>
@@ -50,7 +67,7 @@
         </div>
     </header>
 
-    {% include 'homepage/carousel.html' %}
+    {% include 'IFC/carousel.html' %}
 
     <!-- Main Content -->
     <main class="py-5">
