@@ -1,4 +1,4 @@
-{% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -7,12 +7,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="{% static 'homepage/images/favicon.ico' %}">
+    <title>RPI IFC</title>
+    
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}" />
+    
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>RPI IFC</title>
+    
 </head>
 
 <body>
@@ -45,6 +49,8 @@
             <p class="lead">Rensselaer Polytechnic Institute</p>
         </div>
     </header>
+
+    {% include 'homepage/carousel.html' %}
 
     <!-- Main Content -->
     <main class="py-5">
