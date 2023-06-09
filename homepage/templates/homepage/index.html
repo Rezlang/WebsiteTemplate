@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -6,10 +7,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="{% static 'homepage/images/favicon.ico' %}">
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Welcome to My Homepage</title>
+    <title>RPI IFC</title>
 </head>
 
 <body>
@@ -36,10 +39,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero bg-primary text-white text-center">
+    <header class="hero bg-light text-black text-center">
         <div class="container">
-            <h1 class="display-4">Welcome to My Homepage</h1>
-            <p class="lead">This is a simple Django application.</p>
+            <h1 class="display-4">Interfraternity Council</h1>
+            <p class="lead">Rensselaer Polytechnic Institute</p>
         </div>
     </header>
 
@@ -66,9 +69,6 @@
         </div>
     </footer>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
