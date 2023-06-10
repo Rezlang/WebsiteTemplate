@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,89 +9,69 @@
     <title>RPI IFC</title>
     
     {% load static %}
-    <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'IFC/images/favicon.ico' %}" />
     
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        .navbar {
-            display: flex;
-            justify-content: center;
-        }
-    
-        .navbar-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-    
-        .navbar-nav .nav-item:not(:last-child) {
-            margin-right: 10px;
-        }
-    
-        .logo-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-            
+        .hero {
+            background-color: rgb(214, 0, 28);
+            color: #000;
+            text-align: center;
+            padding: 50px;
         }
 
-        .bg-red {
-        background-color: rgb(214, 0, 28);
-    }
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        .main-content {
+            padding: 50px;
+        }
+
+        .main-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
     </style>
-    
-
-    
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">For Chapters</a>
-                    </li>
-                    <li class="nav-item logo-button">
-                        <a class="nav-link" href="#">
-                            <img src="{% static 'IFC/images/IFCLogo.png' %}" alt="Button Image" width="200" height="200">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Title IX</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Our Chapters</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar -->
+    {% include 'IFC/navbar.html' %}
 
     <!-- Hero Section -->
-    <header class="hero bg-red text-black text-center">
+    <header class="hero">
         <div class="container">
-            <h1 class="display-4">Interfraternity Council</h1>
-            <p class="lead">Rensselaer Polytechnic Institute</p>
+            <h1>INTERFRATERNITY COUNCIL</h1>
+            <p>Rensselaer Polytechnic Institute</p>
         </div>
     </header>
 
     {% include 'IFC/carousel.html' %}
 
     <!-- Main Content -->
-    <main class="py-5">
+    <main class="main-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -108,9 +87,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-3 bg-light">
+    <footer class="footer">
         <div class="container">
-            <p class="text-center">© 2023 MyWebsite</p>
+            <p>© 2023 MyWebsite</p>
         </div>
     </footer>
 

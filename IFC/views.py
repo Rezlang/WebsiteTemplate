@@ -6,6 +6,10 @@ def homepage(request):
     return render(request, 'IFC/homepage.html')
 
 
+def leadership(request):
+    return render(request, 'IFC/leadership.html')
+
+
 def contacts(request):
     return render(request, 'IFC/contacts.html')
 

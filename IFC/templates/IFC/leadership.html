@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Leadership</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .leader {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .leader-img {
+            width: 200px;
+            margin-right: 20px;
+        }
+        .leader-info {
+            flex: 1;
+        }
+        .leader-name {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .leader-title {
+            font-style: italic;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .leader-description {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'IFC/navbar.html' %}
+
+    <h1>Company Leadership</h1>
+
+    <div class="leader">
+        <img class="leader-img" src="leader1.jpg" alt="Leader 1">
+        <div class="leader-info">
+            <h2 class="leader-name">John Doe</h2>
+            <h3 class="leader-title">CEO</h3>
+            <p class="leader-description">
+                John Doe is the CEO of our company. With over 20 years of experience in the industry, he has led our company
+                to unprecedented growth and success. His vision and leadership have been instrumental in shaping our company's
+                direction and strategy.
+            </p>
+        </div>
+    </div>
+
+    <div class="leader">
+        <img class="leader-img" src="leader2.jpg" alt="Leader 2">
+        <div class="leader-info">
+            <h2 class="leader-name">Jane Smith</h2>
+            <h3 class="leader-title">CTO</h3>
+            <p class="leader-description">
+                Jane Smith serves as our Chief Technology Officer. With a strong background in software development and
+                innovation, she oversees our technology initiatives and ensures that our company remains at the forefront of
+                technological advancements in our industry.
+            </p>
+        </div>
+    </div>
+
+    <!-- Add more leader sections as needed -->
+
+</body>
+
+</html>
