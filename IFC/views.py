@@ -22,16 +22,16 @@ def schedule(request):
     return render(request, 'IFC/schedule.html')
 
 
-def title9(request):
-    return render(request, 'IFC/title9.html')
+def documents(request):
+    return render(request, 'IFC/importantDocuments.html')
 
 
 def forChapters(request):
     return render(request, 'IFC/forChapters.html')
 
 
-def aboutUs(request):
-    return render(request, 'IFC/aboutUs.html')
+def constitution(request):
+    return render(request, 'IFC/constitution.html')
 
 
 def calendar(request):

@@ -13,7 +13,34 @@
     
 
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
         
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 100px); /* Adjust the height as needed */
+        }
+        
+        .calendar-wrapper {
+            max-width: 800px;
+            width: 100%;
+            height: 650px;
+        }
+        
+        .calendar-iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .page-title{
+            background-color: rgb(214, 0, 28);
+            color: black;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -21,9 +48,15 @@
     <!-- Navbar -->
     {% include 'IFC/navbar.html' %}
 
-    <iframe src="https://calendar.google.com/calendar/embed?src=flam5bn86dkrfh381o4htv8o1o%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <h1 class="page-title">IFC Schedule</h1>
     
-
+    <div class="container">
+        <div class="calendar-wrapper">
+            <iframe src="https://embed.styledcalendar.com/#RA1P9JZjB4Y5VaoETxc8" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+            <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+        </div>
+    </div>
+    
     <!-- Footer -->
     {% include 'IFC/footer.html' %}
 </body>

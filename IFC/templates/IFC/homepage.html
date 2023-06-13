@@ -15,12 +15,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
+    
     <style>
         .hero {
             background-color: rgb(214, 0, 28);
             color: #000;
             text-align: center;
             padding: 10px;
+            font-family: 'CustomFont', sans-serif;
         }
 
         .hero h1 {
@@ -56,6 +58,12 @@
         .main-content .container{
             padding: 20px;
         }
+
+        @font-face {
+            font-family: 'CustomFont';
+            src: url("{% static 'IFC/Fonts/Overpass/overpass-extrabold.otf' %}") format('truetype');
+        }
+        
     </style>
 </head>
 
@@ -67,9 +75,11 @@
     <header class="hero">
         <div class="container">
             <div class="d-flex align-items-center justify-content-center">
-                <img src="{% static 'IFC/images/RPILogo.png' %}" alt="Logo" width="150" height="150" class="mr-3">
+                <a href="https://rpi.edu" target="blank">
+                    <img src="{% static 'IFC/images/RPILogo.png' %}" alt="Logo" width="150" height="150" class="mr-3">
+                </a>
                 <div class="text-center">
-                    <h1 class="title-text">INTERFRATERNITY COUNCIL</h1>
+                    <h1 class="title-text">Interfraternity Council</h1>
                     <p class="title-text">Rensselaer Polytechnic Institute</p>
                 </div>
             </div>
@@ -90,11 +100,17 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" style="min-height: 300px;">
                 <div class="col-lg-6">
-                    <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, velit?</p>
+                    <p style="margin-top: 50px;">Over 20% of RPI student body is involved with Fraternity or Sorority Life!</p>
+                    <div class="text-center" style="margin-left: 310px;">
+                        <div style="transform: scale(2); margin-top: 40px;">
+                            {% include 'IFC/percentageGraph.html' %}
+                        </div>
+                    </div>
                 </div>
+                
+                
                 <div class="col-lg-6">
                     <h2>Our Services</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, velit?</p>

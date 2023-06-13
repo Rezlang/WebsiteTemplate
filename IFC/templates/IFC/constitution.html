@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution</title>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'IFC/images/favicon.png' %}" />
+
+    <link rel="stylesheet" href="{% static 'PDFButtons.css' %}">
+
+    <style>
+        /* Add your custom styles here */
+        .page-title {
+            background-color: rgb(214, 0, 28);
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+    
+</head>
+
+<body>
+    {% include 'IFC/navbar.html' %}
+
+    <h1 class="page-title">Constitution and Bylaws</h1>
+
+    <div class="pdf-buttons">
+        <a href="path/to/document1.pdf" target="_blank" class="pdf-button">
+            <div class="stripe"></div>
+            <div class="text">Document 1</div>
+        </a>
+        <a href="path/to/document2.pdf" target="_blank" class="pdf-button">
+            <div class="stripe"></div>
+            <div class="text">Document 2</div>
+        </a>
+        <a href="path/to/document3.pdf" target="_blank" class="pdf-button">
+            <div class="stripe"></div>
+            <div class="text">Document 3</div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    {% include 'IFC/footer.html' %}
+</body>
+
+</html>

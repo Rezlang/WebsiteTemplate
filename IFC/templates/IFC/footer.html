@@ -15,7 +15,7 @@
         }
     
         .footer {
-            background: #000;
+            background: #EDEDED;
             padding: 30px 0px;
             font-family: 'Play', sans-serif;
             text-align: center;
@@ -27,20 +27,20 @@
             width: 100%;
             margin: 1% 0%;
             padding: 0.6% 0%;
-            color: gray;
+            color:black;
             font-size: 0.8em;
         }
     
         .footer .row a {
             text-decoration: none;
-            color: gray;
+            color: black;
             transition: 0.5s;
             display: inline-block;
             margin: 0 5px; /* Adjust the margin as per your preference */
         }
     
         .footer .row a:hover {
-            color: #fff;
+            color: #808080;
         }
     
         .footer .row ul {
@@ -98,33 +98,32 @@
 <footer>
     <div class="footer">
         <div class="row">
-            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/rpiifc/?hl=en" target="blank"><i class="fa fa-instagram"></i></a>
         </div>
 
         <div class="row">
             <ul>
-                <li><a href="#" onclick="composeEmail();">Contact us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Career</a></li>
+                <li><a href="mailto:ifc@rpi.edu?cc=ifc.rpi.president@gmail.com"> Contact us</a></li>
+                <li><a href="https://sll.rpi.edu/fraternity-and-sorority-commons" target="blank">Fraternity & Sorority Commons</a></li>
+                <li><a href="leadership">About us</a></li>
+                <li><a href="chapters">Our chapters</a></li>
+                <li><a href="https://rpi.edu" target="blank">RPI</a></li>
             </ul>
         </div>
 
         <div class="row">
-            Copyright © 2021 Rensselaer Polytechnic institute Interfraternity Council
+            Copyright © 2023 Rensselaer Polytechnic Institute | Interfraternity Council
         </div>
     </div>
     <script>
         function composeEmail() {
-          var email = 'ifc@rpi.edu';
-          var cc = 'ifc.rpi.president@gmail.com';
-          var subject = 'Subject Here';
-          var body = 'Hello IFC,'
-        
-          var mailtoLink = 'mailto:' + email + '?cc=' + cc + '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-          window.location.href = mailtoLink;
+            var email = 'ifc@rpi.edu';
+            var subject = 'Subject Here';
+            var body = 'Hello IFC,';
+    
+            var mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailtoLink;
         }
-        </script>
+    </script>    
 </footer>
 
