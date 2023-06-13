@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.button {
+  margin: 5px;
+  width: calc(25% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+.button:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.button img {
+  width: 100%;
+  height: auto;
+}
+
+.button.disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.brighten img {
+-webkit-filter: brightness(50%);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+.brighten img:hover {
+-webkit-filter: brightness(100%);
+}
+
+.nickname {
+  color: #808080; /* Change this to whatever color you want */
+}
+
+.button p {
+  margin: 1px 0; /* Reduce the top and bottom margin */
+}
+
+</style>
+</head>
+<body>
+    {% load static %}
+
+<div class="container">
+  <a href="/page1" class="button brighten">
+    <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Image 1">
+    <p>Phi Sigma Kappa</p>
+    <p class="nickname">Church</p>
+  </a>
+  <a href="/page2" class="button brighten">
+    <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Image 2">
+    <p>Phi Gamma Delta</p>
+    <p class="nickname">Fiji</p>
+  </a>
+  <a href="/page3" class="button brighten">
+    <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Image 3">
+    <p>Alpha Sigma Phi</p>
+    <p class="nickname">ASig</p>
+  </a>
+  <a href="/page4" class="button brighten">
+    <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Image 4">
+    <p>Sigma Alpha Epsilon</p>
+    <p class="nickname">SAE</p>
+  </a>
+  
+  <!-- Add more buttons as desired... -->
+
+  <!-- Example of a disabled button -->
+  <div class="button disabled">
+    <img src="image5.png" alt="Image 5">
+    <p>Text 5</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Calendar</title>
+    
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'IFC/images/favicon.png' %}" />
+    
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include 'IFC/navbar.html' %}
+
+    <iframe src="https://calendar.google.com/calendar/embed?src=flam5bn86dkrfh381o4htv8o1o%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    
+
+    <!-- Footer -->
+    {% include 'IFC/footer.html' %}
+</body>
+
+</html>

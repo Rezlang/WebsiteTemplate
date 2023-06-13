@@ -34,5 +34,5 @@ def aboutUs(request):
     return render(request, 'IFC/aboutUs.html')
 
 
-def ourChapters(request):
-    return render(request, 'IFC/ourChapters.html')
+def calendar(request):
+    return render(request, 'IFC/calendar.html')
