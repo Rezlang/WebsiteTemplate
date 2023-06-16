@@ -10,86 +10,103 @@
 
     <style>
         .flex-wrapper {
-  display: flex;
-  flex-flow: row nowrap;
-}
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
 
-.single-chart {
-  width: 33%;
-  justify-content: space-around ;
-}
+        .single-chart {
+            width: 33%;
+            justify-content: space-around;
+        }
 
-.circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 80%;
-  max-height: 250px;
-}
+        .circular-chart {
+            display: block;
+            margin: 10px auto;
+            max-width: 80%;
+            max-height: 250px;
+        }
 
-.circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 3.8;
-}
+        .circle-bg {
+            fill: none;
+            stroke: #eee;
+            stroke-width: 3.8;
+        }
 
-.circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  animation: progress 1s ease-out forwards;
-}
+        .circle {
+            fill: none;
+            stroke-width: 2.8;
+            stroke-linecap: round;
+            animation: progress 1s ease-out forwards;
+        }
 
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
+        @keyframes progress {
+            0% {
+                stroke-dasharray: 0 100;
+            }
+        }
 
-.circular-chart.orange .circle {
-  stroke: #ff9f00;
-}
+        .circular-chart.red .circle {
+            stroke: rgb(214, 0, 28);
+        }
 
-.circular-chart.green .circle {
-  stroke: #4CC790;
-}
+        .percentage {
+            fill: #666;
+            font-family: sans-serif;
+            font-size: 0.5em;
+            text-anchor: middle;
+        }
 
-.circular-chart.blue .circle {
-  stroke: #3c9ee5;
-}
+        .single-chart p{
+          font-size: 24px;
+        }
 
-.circular-chart.red .circle {
-  stroke: #ff0000;
-}
+        .zoom {
+          transition: transform .2s; /* Animation */
+          width: auto;
+          height: 100%;
+          margin: 0 auto;
+        }
 
-.percentage {
-  fill: #666;
-  font-family: sans-serif;
-  font-size: 0.5em;
-  text-anchor: middle;
-}
-       
+        .zoom:hover {
+          transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
     </style>
 </head>
 
 <body>
     <div class="flex-wrapper">
-        <div class="single-chart">
-          <svg viewBox="0 0 36 36" class="circular-chart red">
-            <path class="circle-bg"
-              d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-            <path class="circle"
-              stroke-dasharray="23, 100"
-              d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-            <text x="18" y="20.35" class="percentage">23%</text>
-          </svg>
+        <div class="single-chart zoom">
+            <svg viewBox="0 0 36 36" class="circular-chart red">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="75, 100"
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="20.35" class="percentage">75%</text>
+            </svg>
+            <p>Over 75% of fraternity members have above a 3.0 GPA.</p>
         </div>
-      </div>
+
+        <div class="single-chart zoom">
+            <svg viewBox="0 0 36 36" class="circular-chart red">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="50, 100"
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="20.35" class="percentage">50%</text>
+            </svg>
+            <p>Over 50% of fraternity members have a job within two months of graduation.</p>
+        </div>
+
+        <div class="single-chart zoom">
+            <svg viewBox="0 0 36 36" class="circular-chart red">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="90, 100"
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="20.35" class="percentage">90%</text>
+            </svg>
+            <p>Over 90% of fraternity members graduate.</p>
+        </div>
+    </div>
 </body>
 
 </html>
