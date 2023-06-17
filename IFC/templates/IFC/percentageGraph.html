@@ -17,14 +17,14 @@
 
         .single-chart {
             width: 33%;
-            justify-content: space-around;
         }
 
         .circular-chart {
             display: block;
             margin: 10px auto;
             max-width: 80%;
-            max-height: 250px;
+            height: 250px;
+            overflow: hidden;
         }
 
         .circle-bg {
@@ -72,40 +72,62 @@
           transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         }
 
+        .text-wrapper {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .lock-size {
+          height: 200px !important;
+          width: 80% !important;
+        }
+
+
     </style>
 </head>
 
 <body>
     <div class="flex-wrapper">
         <div class="single-chart zoom">
-            <svg viewBox="0 0 36 36" class="circular-chart red">
+            <svg viewBox="0 0 36 36" class="circular-chart red lock-size">
                 <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <path class="circle" stroke-dasharray="75, 100"
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <text x="18" y="20.35" class="percentage">75%</text>
             </svg>
-            <p>Over 75% of fraternity members have above a 3.0 GPA.</p>
+            <div class="text-wrapper">
+              <p>Over 75% of fraternity members have above a 3.0 GPA.</p>
+            </div>
         </div>
 
         <div class="single-chart zoom">
-            <svg viewBox="0 0 36 36" class="circular-chart red">
+            <svg viewBox="0 0 36 36" class="circular-chart red lock-size">
                 <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <path class="circle" stroke-dasharray="50, 100"
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <text x="18" y="20.35" class="percentage">50%</text>
             </svg>
-            <p>Over 50% of fraternity members have a job within two months of graduation.</p>
+            <div class="text-wrapper">
+              <p>Over 50% of fraternity members have a job within two months of graduation.</p>
+            </div>
         </div>
 
         <div class="single-chart zoom">
-            <svg viewBox="0 0 36 36" class="circular-chart red">
-                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                <path class="circle" stroke-dasharray="90, 100"
-                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                <text x="18" y="20.35" class="percentage">90%</text>
-            </svg>
-            <p>Over 90% of fraternity members graduate.</p>
-        </div>
+          <svg viewBox="0 0 36 36" class="circular-chart red lock-size" style="margin-bottom: 20;">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="85, 100"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">90%</text>
+          </svg>
+          <div class="text-wrapper">
+            <p>Over 90% of fraternity members graduate RPI.</p>
+          </div>
+      </div>
     </div>
 </body>
 
