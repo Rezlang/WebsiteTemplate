@@ -36,10 +36,17 @@
             height: 100%;
             border: 0;
         }
-        .page-title{
+        .red-bar{
             background-color: rgb(214, 0, 28);
-            color: black;
+            color: #000;
             text-align: center;
+            padding: 15px;
+        }
+        .page-title{
+            color: #000;
+            text-align: center;
+            padding-top: 25px;
+            padding-bottom: 0px;
         }
     </style>
 </head>
@@ -48,8 +55,8 @@
     <!-- Navbar -->
     {% include 'IFC/navbar.html' %}
 
-    <h1 class="page-title">IFC Schedule</h1>
-    
+    <h1 class="red-bar"></h1>
+    <h2 class = "page-title">IFC Calendar</h2>
     <div class="container">
         <div class="calendar-wrapper">
             <iframe src="https://embed.styledcalendar.com/#RA1P9JZjB4Y5VaoETxc8" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
