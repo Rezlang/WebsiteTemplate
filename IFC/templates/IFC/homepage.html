@@ -62,53 +62,56 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    {% include 'IFC/navbar.html' %}
+    {% include 'IFC/dropdownBanner.html' %}
+    <div id="main-content">
+        <!-- Navbar -->
+        {% include 'IFC/navbar.html' %}
 
-    <!-- Hero Section -->
-    <header class="hero"></header>
+        <!-- Hero Section -->
+        <header class="hero"></header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col-lg-6">
-                    <!-- First Image Carousel -->
-                    {% include 'IFC/carousel.html' %}
-                </div>
-                <div class="col-lg-6">
-                    <!-- Second Image Carousel -->
-                    {% include 'IFC/carousel.html' %}
-                </div>
-            </div>
-        </div>
-        
-        <hr class="separator">
-
-        <div class ="statistics">
-            <div class="row justify-content-center" style="margin-bottom: 0px; text-align: center;">
-                <h1>About the IFC</h1>
-            </div>
+        <!-- Main Content -->
+        <main class="main-content">
             <div class="container">
-                {% include 'IFC/percentageGraph.html' %}
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-lg-6">
+                        <!-- First Image Carousel -->
+                        {% include 'IFC/carousel.html' %}
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Second Image Carousel -->
+                        {% include 'IFC/carousel.html' %}
+                    </div>
+                </div>
             </div>
-        </div>
+            
+            <hr class="separator">
 
-        <div>
-            {% include 'IFC/splitSection.html' %}
-        </div>
+            <div class ="statistics">
+                <div class="row justify-content-center" style="margin-bottom: 0px; text-align: center;">
+                    <h1>About the IFC</h1>
+                </div>
+                <div class="container">
+                    {% include 'IFC/percentageGraph.html' %}
+                </div>
+            </div>
+
+            <div>
+                {% include 'IFC/splitSection.html' %}
+            </div>
+            
+        </main>
+
+
         
-    </main>
 
+        <!-- Footer -->
+        {% include 'IFC/footer.html' %}
+        
 
-    
-
-    <!-- Footer -->
-    {% include 'IFC/footer.html' %}
-    
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    </div>
 </body>
 
 </html>

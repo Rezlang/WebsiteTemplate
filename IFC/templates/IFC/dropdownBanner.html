@@ -1,0 +1,45 @@
+<div id="notification">
+    {% include 'IFC/animatedMessage.html' %}
+    <div id="close-btn">X</div>
+</div>
+
+<style>
+    #notification {
+      width: 100%;
+      background-color: #f8d7da;
+      color: #721c24;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      transition: top 0.9s ease-out;
+    }
+    #notification p {
+      margin: 0;
+    }
+    #close-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    #main-content {
+      transition: margin-top 0.3s ease-out;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+      var notification = document.getElementById('notification');
+      var closeBtn = document.getElementById('close-btn');
+      var mainContent = document.getElementById('main-content');
+
+      notification.style.top = '0px';
+      mainContent.style.marginTop = '0px';
+
+      closeBtn.onclick = function() {
+        notification.style.top = '-' + (notification.offsetHeight * 2) + 'px';
+        mainContent.style.marginTop = '-' + notification.offsetHeight + 'px';
+      }
+    }
+</script>
