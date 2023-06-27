@@ -20,6 +20,10 @@
             color: #fff;
         }
         
+        .colour-block h1{
+            position: relative; top: -30px;
+        }
+        
         .white-block {
             background: #fff;
             width: 100%;
@@ -33,6 +37,12 @@
             font-size: 72px;
             font-weight: normal;
         }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: normal;
+        }
         
         p {
             font-size: 24px;
@@ -44,9 +54,15 @@
             align-items: center;
         }
 
+        .flex-window h2{
+            margin: 100px;
+            position: relative;
+            top: -80px;
+        }
+
         .flex-window img {
             width: 40%;
-            object-fit: contain; /* Adjusted object-fit */
+            object-fit: cover; /* Adjusted object-fit */
             max-height: 100%; /* Added max-height property */
         }
         
@@ -75,16 +91,17 @@
 
     <div class="skew-c"></div>
     <div class="colour-block">
-        <h1>Responsive Skewed Page Dividers.</h1>
+        <h1>IFC Philanthropy and Service</h1>
     </div>
     <div class="skew-cc"></div>
     <div class="white-block">
         <div class="flex-window">
             <div>
-                <h1>Header Text</h1>
-                <p>Some text content below the header.</p>
+                <h2>
+                    The Fraternity and Sorority community at RPI raises over $100,000 each year for charities and community organizations.
+                </h2>
             </div>
-            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Logo" style="padding: 25px; height: 400px;">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Logo" style="padding: 25px; height: 500px; position: relative; top: -60px;">
         </div>
     </div>
     <div class="skew-c"></div>
