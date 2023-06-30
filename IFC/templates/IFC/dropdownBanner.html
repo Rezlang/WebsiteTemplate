@@ -1,9 +1,13 @@
+{% load static %}
 <div id="notification">
   <h2>Welcome to the RPI Interfraternity Council website!</h2>
-  <div id="close-btn">X</div>
+  <div id="close-btn">
+    <img src="{% static 'IFC/images/closeButton.png' %}" alt="Logo" style="height: 30px;">
+  </div>
 </div>
 
 <style>
+  
     #notification {
       width: 100%;
       background-color: #f8d7da;
@@ -19,7 +23,7 @@
     #close-btn {
       position: absolute;
       right: 10px;
-      top: 50%;
+      top: 45%;
       transform: translateY(-50%);
       cursor: pointer;
       font-size: 30px;
