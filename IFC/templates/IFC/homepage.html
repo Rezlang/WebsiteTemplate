@@ -17,14 +17,6 @@
 
     
     <style>
-        .hero {
-            background-color: rgb(214, 0, 28);
-            color: #000;
-            text-align: center;
-            padding: 15px;
-        }
-        
-
 
         .hero .title-text{
             color: rgb(0, 0, 0);
@@ -67,8 +59,6 @@
         <!-- Navbar -->
         {% include 'IFC/navbar.html' %}
 
-        <!-- Hero Section -->
-        <header class="hero"></header>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -86,10 +76,11 @@
             </div>
             
             <hr class="separator">
+            <h1>About the IFC</h1>
+            <hr class="separator">
 
             <div class ="statistics">
                 <div class="row justify-content-center" style="margin-bottom: 0px; text-align: center;">
-                    <h1>About the IFC</h1>
                 </div>
                 <div class="container">
                     {% include 'IFC/percentageGraph.html' %}
