@@ -38,6 +38,20 @@ def calendar(request):
     return render(request, 'IFC/calendar.html')
 
 
+def register(request):
+    return render(request, 'IFC/register.html')
+
+
+def fall(request):
+    return render(request, 'IFC/fall.html')
+
+
+def spring(request):
+    return render(request, 'IFC/spring.html')
+
+
+def eventSchedule(request):
+    return render(request, 'IFC/eventSchedule.html')
 def ourChapters(request):
     return render(request, 'IFC/ourChapters.html')
 
