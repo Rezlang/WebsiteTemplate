@@ -6,9 +6,8 @@ urlpatterns = [
     path("documents", views.documents, name="documents"),
     path("chapters", views.ourChapters, name="chapters"),
     path("calendar", views.calendar, name="calendar"),
-    path("constitution", views.constitution, name="constitution"),
     path("leadership", views.leadership, name="leadership"),
-    path("register", views.register, name="register"),
+    path("recruitment", views.recruitment, name="recruitment"),
     path("fall", views.fall, name="fall"),
     path("spring", views.spring, name="spring"),
     path("event-schedule", views.eventSchedule, name="event-schedule"),
@@ -35,6 +34,6 @@ urlpatterns = [
     path("TauKappaEpsilon", views.TauKappaEpsilon, name="TauKappaEpsilon"),
     path("ThetaXi", views.ThetaXi, name="ThetaXi"),
     path("ZetaPsi", views.ZetaPsi, name="ZetaPsi"),
-    
-    
+
+
 ]
