@@ -15,9 +15,65 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    
     <style>
-        
+        .bottom-buttons{
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .learn-button {
+            position: relative;
+            overflow: hidden;
+            color: grey;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            max-width: 30%;
+            margin: 0 auto;
+            background-color: transparent;
+        }
+
+        .learn-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: grey;
+            transition: width 0.3s ease-in-out;
+            z-index: -1;
+        }
+
+        .learn-button:hover {
+            color: white;
+        }
+
+        .learn-button:hover::before {
+            width: 100%;
+        }
+
+        .register-button {
+            transition: 0.3s;
+            background-color: rgb(214, 0, 28);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            max-width: 30%;
+            margin: 0 auto;
+        }
+
+        .register-button:hover {
+            transition: 0.3s;
+            filter: brightness(75%);
+        }
     </style>
 </head>
 
@@ -26,11 +82,13 @@
         <!-- Navbar -->
         {% include 'IFC/navbar.html' %}
 
+        <div class="container">
 
-        
-
-
-        
+            <div class="bottom-buttons">
+                <button class="learn-button"> Learn More</button>
+                <button class="register-button">Register</button>
+            </div>
+        </div>
 
         <!-- Footer -->
         {% include 'IFC/footer.html' %}
