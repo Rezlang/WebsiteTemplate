@@ -42,7 +42,8 @@ def ourChapters(request):
     return render(request, 'IFC/ourChapters.html')
 
 def Acacia(request):
-    return render(request, 'IFC/chapterPages/Acacia.html')
+    context = {}
+    return render(request, 'IFC/chapterPages/Acacia.html', context)
 
 def AlphaEpsilonPi(request):
     return render(request, 'IFC/chapterPages/AlphaEpsilonPi.html')

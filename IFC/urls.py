@@ -8,6 +8,8 @@ urlpatterns = [
     path("calendar", views.calendar, name="calendar"),
     path("constitution", views.constitution, name="constitution"),
     path("leadership", views.leadership, name="leadership"),
+
+    
     path("Acacia", views.Acacia, name="Acacia"),
     path("AlphaEpsilonPi", views.AlphaEpsilonPi, name="AlphaEpsilonPi"),
     path("AlphaSigmaPhi", views.AlphaSigmaPhi, name="AlphaSigmaPhi"),
