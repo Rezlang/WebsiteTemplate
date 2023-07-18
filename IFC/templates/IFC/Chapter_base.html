@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Include CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" href="path/to/style.css">
+
+    <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-column {
+      flex-basis: 55%;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .right-column {
+      flex-basis: 45%;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .social-bar {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .social-bar a {
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .social-bar a:last-child {
+      margin-right: 0;
+    }
+    p {
+      font-size: 18px;
+    }
+    .contact_text {
+      font-size: 15px;
+    }
+    .prov-image {
+      margin-bottom: 10px;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .map {
+      margin-top: 10px;
+    }
+    </style>
+    </head>
+    <body>
+
+        {% include 'IFC/navbar.html' %}
+        <div class="container">
+            <div class="left-column">
+              <div class="content">
+                {% block left_column %}
+                <!-- This is a placeholder that child templates can override -->
+                {% endblock %}
+
+                {% block links %} {% endblock %}
+
+            </div>
+            </div>
+            <div class="right-column">
+               {% block image %} {% endblock %} 
+
+               {% block map %} {% endblock %}
+
+                {% block right_column %}
+                <!-- This is a placeholder that child templates can override -->
+                {% endblock %}
+            </div>
+          </div>
+    
+        {% include 'IFC/footer.html' %}
+
+    </body>
+</html>

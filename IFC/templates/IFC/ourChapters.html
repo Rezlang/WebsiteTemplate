@@ -15,15 +15,17 @@
             text-align: center;
             position: flex;
         }
+        
+        .chapters{margin-top: 25px;}
     </style>
 </head>
 
 <body>
     {% include 'IFC/navbar.html' %}
 
-    <h1 class="page-title">Our Chapters</h1>
-
-    {% include 'IFC/chapterGrid.html' %}
+    <div class="chapters">
+        {% include 'IFC/chapterGrid.html' %}
+    </div> 
 
     <!-- Footer -->
     {% include 'IFC/footer.html' %}

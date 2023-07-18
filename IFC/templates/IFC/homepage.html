@@ -17,38 +17,6 @@
 
     
     <style>
-        .hero {
-            background-color: rgb(214, 0, 28);
-            color: #000;
-            text-align: center;
-            padding: 10px;
-            font-family: 'CustomFont', sans-serif;
-        }
-
-        .hero h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 0;
-        }
-
-        .main-content {
-            padding: 20px;
-        }
-
-        .main-content h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .main-content p {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
 
         .hero .title-text{
             color: rgb(0, 0, 0);
@@ -57,6 +25,24 @@
         }
         .main-content .container{
             padding: 20px;
+        }
+
+        .statistics p{
+            font-size: 12px;
+            text-justify: center;
+            text-align: center;
+        }
+
+        .statistics h1{
+            font-size: 24px;
+            text-justify: center;
+            text-align: center;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
         }
 
         @font-face {
@@ -68,65 +54,76 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    {% include 'IFC/navbar.html' %}
+    {% include 'IFC/dropdownBanner.html' %}
+    <div id="main-content">
+        <!-- Navbar -->
+        {% include 'IFC/navbar.html' %}
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-center">
-                <a href="https://rpi.edu" target="blank">
-                    <img src="{% static 'IFC/images/RPILogo.png' %}" alt="Logo" width="150" height="150" class="mr-3">
-                </a>
-                <div class="text-center">
-                    <h1 class="title-text">Interfraternity Council</h1>
-                    <p class="title-text">Rensselaer Polytechnic Institute</p>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col-lg-6">
-                    <!-- First Image Carousel -->
-                    {% include 'IFC/carousel.html' %}
-                </div>
-                <div class="col-lg-6">
-                    <!-- Second Image Carousel -->
-                    {% include 'IFC/carousel.html' %}
-                </div>
-            </div>
-
-            <div class="row" style="min-height: 300px;">
-                <div class="col-lg-6">
-                    <p style="margin-top: 50px;">Over 20% of RPI student body is involved with Fraternity or Sorority Life!</p>
-                    <div class="text-center" style="margin-left: 310px;">
-                        <div style="transform: scale(2); margin-top: 40px;">
-                            {% include 'IFC/percentageGraph.html' %}
-                        </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-lg-6">
+                        <!-- First Image Carousel -->
+                        {% include 'IFC/carousel.html' %}
                     </div>
-                </div>
-                
-                
-                <div class="col-lg-6">
-                    <h2>Our Services</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, velit?</p>
+                    <div class="col-lg-6">
+                        <!-- Second Image Carousel -->
+                        {% include 'IFC/carousel.html' %}
+                    </div>
                 </div>
             </div>
             
-        </div>
-    </main>
-    
+            <hr class="separator">
+            <h1>About the IFC</h1>
+            <hr class="separator">
 
-    <!-- Footer -->
-    {% include 'IFC/footer.html' %}
-    
+            <div class ="statistics">
+                <div class="row justify-content-center" style="margin-bottom: 0px; text-align: center;">
+                </div>
+                <div class="container">
+                    {% include 'IFC/percentageGraph.html' %}
+                </div>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+            <div>
+                {% include 'IFC/splitSection.html' %}
+            </div>
+            
+        </main>
+
+
+        
+
+        <!-- Footer -->
+        {% include 'IFC/footer.html' %}
+        
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                // For each carousel on the page
+                $(".carousel").each(function(index) {
+                    var carouselId = "carouselExampleIndicators" + (index + 1);
+            
+                    // Set the ID of the carousel
+                    $(this).attr("id", carouselId);
+            
+                    // Update the data-targets of the carousel indicators
+                    $(this).find(".carousel-indicators li").each(function() {
+                        $(this).attr("data-target", "#" + carouselId);
+                    });
+            
+                    // Update the hrefs of the carousel controls
+                    $(this).find(".carousel-control-prev").attr("href", "#" + carouselId);
+                    $(this).find(".carousel-control-next").attr("href", "#" + carouselId);
+                });
+            });
+            </script>
+    </div>
 </body>
 
 </html>
