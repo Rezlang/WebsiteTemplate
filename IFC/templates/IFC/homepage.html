@@ -123,6 +123,22 @@
                 });
             });
             </script>
+        <script>
+            window.onload = function() {
+              var notification = document.getElementById('notification');
+              var closeBtn = document.getElementById('close-btn');
+              var mainContent = document.getElementById('main-content');
+        
+              notification.style.top = '0px';
+              mainContent.style.marginTop = '0px';
+        
+              closeBtn.onclick = function() {
+                notification.style.top = '-' + (notification.offsetHeight * 2) + 'px';
+                mainContent.style.marginTop = '-' + notification.offsetHeight + 'px';
+              }
+            }
+        
+        </script>
     </div>
 </body>
 
