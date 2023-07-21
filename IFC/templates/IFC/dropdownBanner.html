@@ -1,10 +1,11 @@
 {% load static %}
 <div id="notification">
   <h2>Welcome to the RPI Interfraternity Council website!</h2>
-  <div id="close-btn">
-    <img src="{% static 'IFC/images/closeButton.png' %}" alt="Logo" style="height: 30px;">
-  </div>
+    <button id="close-btn" style="background: none; border: none;">
+        <img src="{% static 'IFC/images/closeButton.png' %}" alt="Close button" style="height: 30px;">
+    </button>
 </div>
+
 
 <style>
   
@@ -33,19 +34,3 @@
       transition: margin-top 0.3s ease-out;
     }
 </style>
-
-<script>
-    window.onload = function() {
-      var notification = document.getElementById('notification');
-      var closeBtn = document.getElementById('close-btn');
-      var mainContent = document.getElementById('main-content');
-
-      notification.style.top = '0px';
-      mainContent.style.marginTop = '0px';
-
-      closeBtn.onclick = function() {
-        notification.style.top = '-' + (notification.offsetHeight * 2) + 'px';
-        mainContent.style.marginTop = '-' + notification.offsetHeight + 'px';
-      }
-    }
-</script>
