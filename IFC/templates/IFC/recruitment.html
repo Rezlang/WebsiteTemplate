@@ -36,11 +36,19 @@
             text-align: left;
             color: black;
             padding: 20px;
+            align-items: center;
         }
 
         .FAQ{
             padding: 20px 0 20px 0;
             text-align: center;
+        }
+
+        .button-wrapper{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            display: flex;
         }
 
         a.register-button {
@@ -51,9 +59,27 @@
             border: none;
             font-size: 16px;
             text-align: center;
+
         }
 
         a.register-button:hover {
+            transition: 0.3s;
+            filter: brightness(75%);
+            color: white;
+            text-decoration: none;
+        }
+
+        a.philanthropy-button {
+            transition: 0.3s;
+            background-color: rgb(214, 0, 28);
+            color: white;
+            padding: 10px 100px;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        a.philanthropy-button:hover {
             transition: 0.3s;
             filter: brightness(75%);
             color: white;
@@ -118,7 +144,13 @@
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
                         commodo consequat.</p>
+                    <div class="button-wrapper">
+                        <a class="philanthropy-button" href="philanthropy" target="blank">
+                            Learn More
+                        </a>
+                    </div>
                 </div>
+
 
             </div>
         </div>
