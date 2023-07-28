@@ -18,6 +18,31 @@
     
     <style>
 
+        .introduction{
+            justify-content: center;
+            text-align: center;
+            margin: 50px 200px;
+        }
+
+        .two-adjacent{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 20px 200px 20px 200px;
+        }
+        
+        .titled-text{
+            justify-content: center;
+            text-align: left;
+            color: black;
+            padding: 20px;
+        }
+
+        .FAQ{
+            padding: 20px 0 20px 0;
+            text-align: center;
+        }
+
         a.register-button {
             transition: 0.3s;
             background-color: rgb(214, 0, 28);
@@ -50,6 +75,7 @@
                 margin-top: 20px;
             }
         }
+
         
     </style>
 </head>
@@ -57,10 +83,10 @@
 <body>
     {% include 'IFC/navbar.html' %}
     <div id="main-content">
-        <h1>Why Join A Fraternity?</h1>
 
         <div class="introduction">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            <h1>Why Join A Fraternity?</h1>
+            <p style="padding: 0 100px 0 100px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
                 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
@@ -69,8 +95,30 @@
                  id est laborum.</p>
         </div>
 
-        <div class="advantages">
+        <div class="Community">
             <div class="two-adjacent">
+                <div class="titled-text">
+                    <h2>Community</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                        commodo consequat.</p>
+                </div>
+                <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" class="d-block w-100" alt="Image 1">
+            </div>
+        </div>
+
+        <div class="Philanthropy">
+            <div class="two-adjacent">
+                <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" class="d-block w-100" alt="Image 1">
+
+                <div class="titled-text">
+                    <h2>Philanthropy & Service</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                        commodo consequat.</p>
+                </div>
 
             </div>
         </div>
@@ -80,6 +128,8 @@
         </div>
 
         <div class="FAQ">
+                <h2>Fequently Asked Questions</h2>
+                {% include 'IFC/FAQ.html' %}
 
         </div>
 
