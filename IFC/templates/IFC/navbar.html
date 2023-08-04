@@ -16,13 +16,13 @@
 
     <style>
         .navbar {
-    align-items: center;
-    background-image: url("{% static 'IFC/images/navbarBackground.jpg' %}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 200px; /* Default height for screens larger than or equal to 992px */
-    background-color: #f8f9fa; /* You can change this color according to your design */
-}
+            align-items: center;
+            background-image: url("{% static 'IFC/images/navbarBackground.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 200px; /* Default height for screens larger than or equal to 992px */
+            background-color: #f8f9fa; /* You can change this color according to your design */
+        }
 
         @media (max-width: 991px) {
             /* Styles for screens smaller than 992px */
@@ -86,8 +86,11 @@
             color: white !important;
         }
         .dropdown-item:hover{
-        background-color: rgb(200, 200, 200);
-        color: black;
+            background-color: rgb(200, 200, 200);
+            color: black;
+        }
+        .nav-item{
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -135,7 +138,7 @@
                         <a class="nav-link" href="https://sexualviolence.rpi.edu/" target="_blank">Title IX</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Philanthropy-and-service">Service</a>
+                        <a class="nav-link" href="Philanthropy-and-service">Philanthropy & Service</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="chaptersDropdown" role="button" data-toggle="dropdown"

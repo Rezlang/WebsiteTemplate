@@ -21,21 +21,24 @@
         .introduction{
             justify-content: center;
             text-align: center;
-            margin: 50px 200px;
+            margin: 50px 10%;
         }
 
         .two-adjacent{
             display: flex;
             align-items: center;
-            gap: 50px;
-            padding: 20px 200px 20px 200px;
+            gap: 10%;
+            padding: 20px 10% 20px 10%;
+        }
+        
+        .two-adjacent img{
+            min-width: 40%;
         }
         
         .titled-text{
-            justify-content: center;
             text-align: left;
             color: black;
-            padding: 20px;
+            padding: 10px;
             align-items: center;
         }
 
@@ -91,6 +94,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-bottom: 30px;
 
             .freshmen-button{
                 color: grey;
@@ -112,23 +116,36 @@
 
         <div class="introduction">
             <h1>Why Join A Fraternity?</h1>
-            <p style="padding: 0 100px 0 100px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                 id est laborum.</p>
+            <p style="padding: 0 10% 0 10%;">Joining a fraternity provides a unique 
+                opportunity to cultivate lifelong friendships, foster personal growth, 
+                and create a strong network of professional connections. As a member of 
+                our fraternity community, you will have access to leadership development 
+                programs, community service projects, and social events that promote 
+                camaraderie and teamwork. Our interfraternity council is committed to 
+                creating a respectful and inclusive environment that encourages 
+                individuality while also emphasizing shared values and goals. By becoming 
+                part of our fraternity system, you are not only joining a brotherhood but 
+                investing in a future filled with support, success, and enrichment.</p>
         </div>
 
         <div class="Community">
             <div class="two-adjacent">
                 <div class="titled-text">
                     <h2>Community</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                        commodo consequat.</p>
+                    <p>Joining a fraternity is more than a college experience; it's a 
+                        lifelong journey filled with camaraderie, personal growth, and 
+                        community involvement. Engage in enriching social events, make 
+                        connections that last a lifetime, and contribute to meaningful 
+                        philanthropic efforts. By becoming part of this vibrant community,
+                         you'll forge bonds that extend beyond your university years. 
+                         Discover the unique opportunities and friendships that await 
+                         you in fraternity life!
+                    </p>
+                    <div class="button-wrapper">
+                        <a class="philanthropy-button" href="chapters">
+                            Our Chapters
+                        </a>
+                    </div>
                 </div>
                 <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" class="d-block w-100" alt="Image 1">
             </div>
@@ -140,12 +157,13 @@
 
                 <div class="titled-text">
                     <h2>Philanthropy & Service</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                        commodo consequat.</p>
+                    <p>Philanthropy and service are at the heart of our commitment to both
+                         the RPI community and the broader Troy community. Through 
+                         hands-on volunteering, organized charity events, and 
+                         collaboration with local organizations, we strive to make a 
+                         positive impact. Join us in making a difference!</p>
                     <div class="button-wrapper">
-                        <a class="philanthropy-button" href="philanthropy" target="blank">
+                        <a class="philanthropy-button" href="philanthropy">
                             Learn More
                         </a>
                     </div>
@@ -173,7 +191,6 @@
             <a id="freshmenInterest" class="freshmen-button" href="" target="blank">
                 First-year student interest form
             </a>
-
         </div>
         
     </div>
