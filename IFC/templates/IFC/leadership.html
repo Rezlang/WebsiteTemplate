@@ -9,75 +9,112 @@
     <link rel="icon" type="image/x-icon" href="{% static 'IFC/images/favicon.png' %}" />
     <style>
         /* Add your custom styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0px;
+        .containerL {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 10% 0 10%;
         }
-        h1 {
+
+        .leader {
+            width: 30%;
+            padding: 5%;
             text-align: center;
         }
-        .leader {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
+        .leader h2{margin: 0;}
+        .leader p{margin: 0;}
+
+        .leader img {
+            width: 50%;
+            height: 60%;
+            object-fit: contain;
         }
-        .leader-img {
-            width: 200px;
-            margin-right: 20px;
+
+        .position {
+            color: white;
+            background-color: rgb(214, 0, 28);
+            padding: 5px;
         }
-        .leader-info {
-            flex: 1;
-        }
-        .leader-name {
-            font-weight: bold;
-            font-size: 24px;
-        }
-        .leader-title {
-            font-style: italic;
-            color: #999;
-            margin-bottom: 10px;
-        }
-        .leader-org {
-            font-style: italic;
-            color: #6e6e6e;
-            margin-bottom: 10px;
-        }
-        .leader-description {
-            line-height: 1.5;
-        }
+
     </style>
 </head>
 
 <body>
     {% include 'IFC/navbar.html' %}
 
-    <div class="leader">
-        <img class="leader-img" src="leader1.jpg" alt="Leader 1">
-        <div class="leader-info">
-            <h2 class="leader-name">Josh Moskoff</h2>
-            <h3 class="leader-title">President</h3>
-            <h4 class="leader-org">Church</h3>
-            <p class="leader-description">
-                John Doe is the CEO of our company. With over 20 years of experience in the industry, he has led our company
-                to unprecedented growth and success. His vision and leadership have been instrumental in shaping our company's
-                direction and strategy.
-            </p>
+    <div class="containerL">
+        <!-- Repeat this section for each leader -->
+        <div class="leader">
+          <img src="{% static 'IFC/images/leadership/joshMoskoff.png' %}" alt="Leader image">
+          <h2>Josh Moskoff</h2>
+          <p>Computer Science 2025</p>
+          <div class="org">Phi Sigma Kappa</div>
+          <div class="position">President</div>
+          
         </div>
-    </div>
 
-    <div class="leader">
-        <img class="leader-img" src="leader2.jpg" alt="Leader 2">
-        <div class="leader-info">
-            <h2 class="leader-name">Peter Crisileo</h2>
-            <h3 class="leader-title">Executive Vice President</h3>
-            <h4 class="leader-org">LXA</h3>
-            <p class="leader-description">
-                Jane Smith serves as our Chief Technology Officer. With a strong background in software development and
-                innovation, she oversees our technology initiatives and ensures that our company remains at the forefront of
-                technological advancements in our industry.
-            </p>
-        </div>
+        <div class="leader">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Leader image">
+            <h2>Peter Crisileo</h2>
+            <p>Materials Science Engineering 2024</p>
+            <div class="org">Lambda Chi Alpha</div>
+            <div class="position">Vice President</div>
+            
+          </div>
+
+          <div class="leader">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Leader image">
+            <h2>Shawn Vembenil</h2>
+            <p>CS/ITWS 202</p>
+            <div class="org">Sigma Chi</div>
+            <div class="position">VP Recruitment</div>
+            
+          </div>
+
+          <div class="leader">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Leader image">
+            <h2>Nick Khoo</h2>
+            <p>BSAN/ITWS 2025</p>
+            <div class="org">Lambda Chi Alpha</div>
+            <div class="position">VP Finance</div>
+            
+          </div>
+
+          <div class="leader">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Leader image">
+            <h2>Sam Stone</h2>
+            <p>Computer Science 2024</p>
+            <div class="org">Zeta Psi</div>
+            <div class="position">VP Internal Communication</div>
+          </div>
+
+          <div class="leader">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Leader image">
+            <h2>Aidan Saunders</h2>
+            <p>major 202</p>
+            <div class="org">Pi Lambda Phi</div>
+            <div class="position">VP External Communication</div>
+          </div>
+
+          <div class="leader">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Leader image">
+            <h2>Ethan Rokjer</h2>
+            <p>major 202</p>
+            <div class="org">Tau Epsilon Phi</div>
+            <div class="position">VP Philanthropy & Service</div>
+            
+          </div>
+
+          <div class="leader">
+            <img src="{% static 'IFC/images/carousel/image1.jpeg' %}" alt="Leader image">
+            <h2>Matthew So</h2>
+            <p>Computer Systems Engineer</p>
+            <div class="org">Delta Phi</div>
+            <div class="position">IFC Senator</div>
+            
+          </div>
+            
+          
     </div>
 
     <!-- Add more leader sections as needed -->
