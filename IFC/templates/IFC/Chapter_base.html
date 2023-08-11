@@ -11,13 +11,13 @@
     }
 
     .left-column {
-      flex-basis: 55%;
+      width: 55%;
       margin-right: 10px;
       margin-top: 10px;
     }
 
     .right-column {
-      flex-basis: 45%;
+      width: 45%;
       margin-left: 10px;
       margin-top: 10px;
     }
@@ -59,7 +59,7 @@
             <div class="left-column">
               <div class="content">
                 {% block left_column %}
-                <!-- This is a placeholder that child templates can override -->
+
                 {% endblock %}
 
                 {% block links %} {% endblock %}
@@ -70,10 +70,10 @@
                 {% block image %} {% endblock %} 
                
 
-               {% block map %} {% endblock %}
+                {% block map %} {% endblock %}
 
                 {% block right_column %}
-                <!-- This is a placeholder that child templates can override -->
+
                 {% endblock %}
             </div>
           </div>
